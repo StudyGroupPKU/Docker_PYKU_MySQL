@@ -7,3 +7,6 @@ RUN apt-get -yqq update
 #RUN apt-get update #important
 #RUN ["apt-get" ,"install","-y","mysql-server"]
 RUN echo 'service mysql restart' >> /root/.bashrc
+RUN echo 'defaulf-character-set=utf8' >> /etc/mysql/conf.d/mysql.cnf
+RUN echo '[mysqld]' >> /etc/mysql/conf.d/mysql.cnf
+RUN echo 'character-set-server=utf8' >> /etc/mysql/conf.d/mysql.cnf
